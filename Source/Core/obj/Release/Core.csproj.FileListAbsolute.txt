@@ -1,0 +1,5 @@
+C:\Users\felsi\documents\visual studio 2012\Projects\BigDataAnalitycs\Core\bin\Release\Core.dll
+C:\Users\felsi\documents\visual studio 2012\Projects\BigDataAnalitycs\Core\bin\Release\Core.pdb
+C:\Users\felsi\documents\visual studio 2012\Projects\BigDataAnalitycs\Core\obj\Release\Core.csprojResolveAssemblyReference.cache
+C:\Users\felsi\documents\visual studio 2012\Projects\BigDataAnalitycs\Core\obj\Release\Core.dll
+C:\Users\felsi\documents\visual studio 2012\Projects\BigDataAnalitycs\Core\obj\Release\Core.pdb
