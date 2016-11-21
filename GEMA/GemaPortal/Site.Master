@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="BigDataAnalitycs.SiteMaster" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="BigDataAnalitycs.SiteMaster" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,8 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <%--<title><%: Page.Title %> - Big Data</title>--%>
-    <title>Analyzer</title>
+    <title>GEMA</title>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
@@ -20,7 +19,7 @@
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />  
     <style>
         body {
-            background-image: url(Images/bigdata.jpg);
+            background-image: url(Images/color-splash.jpg);
             background-position: inherit;
             background-size:cover;
             background-repeat:no-repeat;
@@ -63,51 +62,21 @@
                 __doPostBack('btnCerrarSesion', parameter)
             }
         </script>
-        <header>            
-            <%--<nav class="navbar navbar-inverse">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">Analyzer</a>
-                    </div>
-                    <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown">Administración<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a  onclick="javascript:postback('parametros')">Parametros</a></li>
-                                    <li><a href="#">Page 1-2</a></li>
-                                    <li><a href="#">Page 1-3</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Page 1</a></li>
-                            <li><a href="#">Page 2</a></li>
-                            <li><a href="#">Page 3</a></li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a id="user"><span class="glyphicon glyphicon-user"></span></a></li>
-                            <li><a onclick="javascript:postback('CerrarSesion')"><span class="glyphicon glyphicon-log-out"></span>Login</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>--%>
+        <header>
             <nav class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <a class="navbar-brand" onclick="javascript:postback('Inicio')">ANALYZER</a>
+                        <a class="navbar-brand" onclick="javascript:postback('Inicio')"> G E M A </a>
                     </div>
                     <ul class="nav navbar-nav">
-                        <telerik:RadMenu ID="Menu" runat="server" EnableRoundedCorners="true" EnableShadows="true"
+                        <telerik:RadMenu ID="Menu" runat="server" EnableRoundedCorners="true" EnableShadows="true" Skin="Glow"
                             OnClientItemOpened="itemOpened" Flow="Horizontal">
                             <Items>
                                 <telerik:RadMenuItem Text="Administración" Value="Administración" >
                                     <Items>
-                                        <telerik:RadMenuItem Text="Parametros" Value="parametros" NavigateUrl="~/Administracion/Parametros.aspx" />                                        
+                                        <telerik:RadMenuItem Text="Usuarios" Value="usuarios" NavigateUrl="~/Administracion/AdminUsuarios.aspx" />                                        
                                         <telerik:RadMenuItem Text="Tablero de control" Value="tableroControl" NavigateUrl="Control/TableroControl.aspx" />
+                                        <telerik:RadMenuItem Text="Cambiar contraseña" Value="cambiarpwd" NavigateUrl="Administracion/CambiarContrasena.aspx" />
                                     </Items>
                                 </telerik:RadMenuItem>
                                 <telerik:RadMenuItem Text="Gestión" Value="gestion" >
@@ -122,20 +91,7 @@
                                     <Items>
                                         <telerik:RadMenuItem Text="Análisis" Value="analisis" NavigateUrl="Proyecto/NuevoProyecto.aspx" />
                                     </Items>
-                                    </telerik:RadMenuItem>
-                                <%--<telerik:RadMenuItem Text="Examenes" Value="examenes" >
-                                    <Items>
-                                        <telerik:RadMenuItem Text="Examen de Fonoaudiologia" Value="fonoaudiologia"  NavigateUrl="~/aspx/ExamenesMedicos/Fonoaudiologia.aspx" />
-                                        <telerik:RadMenuItem Text="Examen Psicologico" Value="psicologico"  NavigateUrl="~/aspx/ExamenesMedicos/Psicologia.aspx" />
-                                        <telerik:RadMenuItem Text="Examen Fisico" Value="fisico"  NavigateUrl="~/aspx/ExamenesMedicos/Fisico.aspx" />
-                                        <telerik:RadMenuItem Text="Examen de Optometria" Value="optometria"  NavigateUrl="~/aspx/ExamenesMedicos/Optometria.aspx" />
-                                    </Items>
-                                </telerik:RadMenuItem>
-                                <telerik:RadMenuItem Text="Reportes" Value="reportes">
-                                    <Items>
-                                        <telerik:RadMenuItem Text="Resultados" Value="resultados"  NavigateUrl="aspx/Reportes/Certificado.aspx" />
-                                    </Items>
-                                </telerik:RadMenuItem>--%>
+                                    </telerik:RadMenuItem>                               
                             </Items>
                         </telerik:RadMenu>
                     </ul>
@@ -148,14 +104,12 @@
         </header>
         <div id="body" class="form-group" style="background: none !Important;padding-top:40px !Important">
             <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
-            <%--<section class="content-wrapper main-content clear-fix">--%>
             <asp:ContentPlaceHolder runat="server" ID="MainContent" />
-            <%--</section>--%>
         </div>
         <footer>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; <%: DateTime.Now.Year %> Analyzer - Big Data</p>
+                    <p>&copy; <%: DateTime.Now.Year %> G E M A - Prototipo</p>
                 </div>
             </div>
         </footer>
