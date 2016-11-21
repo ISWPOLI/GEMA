@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/SimpleSite.Master" AutoEventWireup="true" CodeBehind="Inicio.aspx.cs" Inherits="GEMA.Inicio" %>
+<%@ Page Language="C#" MasterPageFile="~/SimpleSite.Master" AutoEventWireup="true" CodeBehind="Inicio.aspx.cs" Inherits="GEMA.Inicio" %>
 
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="ContentPlaceHolderSimpleSite">
     
@@ -13,7 +13,7 @@
 						<form role="form" action="#" method="POST">
 							<fieldset>
 								<div class="row">
-									<div class="center-block">
+									<div class="center-block text-center">
 										<img class="profile-img" src="Images/NoPhoto.png" alt="" />
 									</div>
 								</div>
