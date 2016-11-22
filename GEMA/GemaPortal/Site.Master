@@ -79,34 +79,39 @@
                                         <telerik:RadMenuItem Text="Cambiar contraseña" Value="cambiarpwd" NavigateUrl="Administracion/CambiarContrasena.aspx" />
                                     </Items>
                                 </telerik:RadMenuItem>
-                                <telerik:RadMenuItem Text="Gestión" Value="gestion" >
+                                <telerik:RadMenuItem Text="Actividades" Value="actividades" >
                                     <Items>
-                                        <telerik:RadMenuItem Text="TRM" Value="TRM"  NavigateUrl="Administracion/TRM.aspx" />
-                                        <telerik:RadMenuItem Text="Clientes" Value="Clientes"  NavigateUrl="Administracion/Cliente.aspx" />
-                                        <telerik:RadMenuItem Text="Centro Costo" Value="Centro Costo"  NavigateUrl="Administracion/CentroCosto.aspx" />
-                                        <telerik:RadMenuItem Text="Movimiento" Value="Movimiento"  NavigateUrl="Administracion/Movimiento.aspx" />
+                                        <telerik:RadMenuItem Text="Registro de actividades" Value="registroActividades"  NavigateUrl="Actividades/ListarActividad.aspx" />
                                     </Items>
                                 </telerik:RadMenuItem>
-                                <telerik:RadMenuItem Text="Proyecto" Value="proyecto" >
+                                <telerik:RadMenuItem Text="Estimativos" Value="estimativos">
                                     <Items>
-                                        <telerik:RadMenuItem Text="Análisis" Value="analisis" NavigateUrl="Proyecto/NuevoProyecto.aspx" />
+                                        <telerik:RadMenuItem Text="Creacion de estimativos" Value="estimativos" NavigateUrl="Actividades/Estimativos.aspx" />
                                     </Items>
-                                    </telerik:RadMenuItem>                               
+                                </telerik:RadMenuItem>
+                                <telerik:RadMenuItem Text="Reportes" Value="reportes">
+                                    <Items>
+                                        <telerik:RadMenuItem Text="Graficas por usuario" Value="grfusuario" NavigateUrl="Reportes/GraficaUsuarios.aspx" />
+                                        <telerik:RadMenuItem Text="Graficas por Proyecto" Value="grfproyecto" NavigateUrl="Reportes/GraficaAdministradorActividades.aspx" />
+                                        <telerik:RadMenuItem Text="Graficas por mes" Value="grfmes" NavigateUrl="Actividades/BandejaPrincipalActividades.aspx" />
+                                        <telerik:RadMenuItem Text="Graficas por cliente" Value="grfusuario" NavigateUrl="Reportes/GraficaPorCliente.aspx" />
+                                    </Items>
+                                </telerik:RadMenuItem>
                             </Items>
                         </telerik:RadMenu>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a><asp:Label runat="server" ID="lblusuario" /><span class="glyphicon glyphicon-user"></span></a></li>
+                        <li><a><span class="glyphicon glyphicon-user"></span><asp:Label runat="server" ID="lblusuario" Text="  Administrador" /></a></li>
                         <li><a onclick="javascript:postback('CerrarSesion')"><span class="glyphicon glyphicon-log-out"></span>Cerrar sesión</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
-        <div id="body" class="form-group" style="background: none !Important;padding-top:40px !Important">
+        <div id="body" class="form-group" style="background: none !Important;padding-top:40px !Important;min-height:615px">
             <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
             <asp:ContentPlaceHolder runat="server" ID="MainContent" />
         </div>
-        <footer>
+        <footer style="background:#000; color:#fff; position: relative; bottom: 0; width:100%">
             <div class="content-wrapper">
                 <div class="float-left">
                     <p>&copy; <%: DateTime.Now.Year %> G E M A - Prototipo</p>
