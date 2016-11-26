@@ -7,7 +7,7 @@
             <div class="col-sm-6 col-md-3">
             </div>
             <div class="col-sm-6 col-md-3">
-                <asp:Label ID="Label1" runat="server" Text="Nombre Usuario" CssClass="lbltexto" Height="30px" Width="140px"></asp:Label>
+                <asp:Label ID="Label1" runat="server" Text="Nombre Cliente" CssClass="lbltexto" Height="30px" Width="140px"></asp:Label>
             </div>
             <div class="col-sm-6 col-md-3">
                 <asp:DropDownList ID="cboGraficaNombreUsuario" runat="server" Width="100%" CssClass="form-control">
