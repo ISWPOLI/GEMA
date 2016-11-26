@@ -51,7 +51,7 @@
             </div>
         </div>
 
-        <div class="row" style="border: none !Important; padding-top: 20px">
+        <div class="row" style="border: none !Important; padding-top: 20px; height:390px">
             <telerik:RadChart ID="RadChart1" runat="server" Width="1200"
                 AutoTextWrap="True"
                 DataSourceID="SqlDataSourceRadChart" Skin="Terlerik"
