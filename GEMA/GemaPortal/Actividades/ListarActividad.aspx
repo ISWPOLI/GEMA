@@ -4,7 +4,7 @@
     <div class="container">
         <h3 class="text-center">RESÚMEN DE HORAS POR TIPO DE ACTIVIDAD EN EL MES </h3>
         <div class="col-md-3">
-            <telerik:RadTreeView ID="RadTreeCLientes" runat="server" Width="100%" Height="600px"
+            <telerik:RadTreeView ID="RadTreeCLientes" runat="server" Width="100%" Height="453px"
                 DataFieldID="IdCliente" DataFieldParentID="idparent" DataTextField="Nombre"
                 DataSourceID="SqlDataSource1" OnNodeClick="RadTreeCLientes_NodeClick">
                 <DataBindings>
@@ -21,8 +21,8 @@
             <telerik:RadTextBox runat="Server" ID="NodeTextBox" EmptyMessage="Nombre Proyecto" Width="90px" Visible="false"></telerik:RadTextBox>
             <telerik:RadTextBox runat="Server" ID="txtAgregarCLiente" EmptyMessage="NombreCliente" Width="90px" Visible="true"></telerik:RadTextBox>
 
-            <asp:Button CssClass="boton" ID="btoAgregar" runat="server" Text="Agregar" Visible="false"></asp:Button>
-            <asp:Button CssClass="boton" ID="btoAgregarCliente" runat="server" Text="Agregar" Visible="true"></asp:Button>
+            <asp:Button CssClass="btn btn-block btn-primary" ID="btoAgregar" runat="server" Text="Agregar" Visible="false"></asp:Button>
+            <asp:Button CssClass="btn btn-block btn-primary" ID="btoAgregarCliente" runat="server" Text="Agregar" Visible="true"></asp:Button>
         </div>
         <div class="col-md-9 pull-right">
             <telerik:RadGrid ID="RadGridActividades"
